@@ -7,7 +7,7 @@ const ul = document.createElement('ul');
 console.log(ul);
 document.body.appendChild(ul);
 for (let year = startYear; year <= endYear; year++) {
-  if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
+  if ((0 === year % 4) && (0 !== year % 100) || (0 === year % 400)) {
     let li = document.createElement('li');
     li.textContent = `${year}`;
     ul.appendChild(li);
