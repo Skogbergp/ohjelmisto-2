@@ -1,25 +1,50 @@
-function calculator(num1, num2, operator) {
-  switch (operation) {
-    case '+':
-      result = val1 + val2;
-      break;
-    case '-':
-      result = val1 - val2;
-      break;
-    case '*':
-      result = val1 * val2;
-      break;
-    case '/':
-      result = val1 / val2;
-      break;
-  }
+"use strict"
+
+function calculator(numbers, operator) {
+    console.log(operator)
+    const num1 = parseInt(numbers[0]);
+    const num2 = parseInt(numbers[1]);
+    switch (operator) {
+        case '+':
+            return num1 + num2;
+        case '-':
+            return num1 - num2;
+        case '*':
+            return num1 * num2;
+        case '/':
+            return num1 / num2;
+    }
 }
+
 function calc(evt) {
     const resultHtml = document.getElementById('result');
     const calculation = document.getElementById('calculation').value;
-    const calcArray = calculation.split("/");
+
     let result = 0;
-    console.log(calcArray);
+    let numArr
+
+    let op = null
+
+    if (calculation.includes("+")) {
+        op = "+"
+        numArr = calculation.split("+")
+        result = calculator(numArr, op)
+    } else if (calculation.includes("-")) {
+        op = "-"
+        numArr = calculation.split("-")
+        result = calculator(numArr, op)
+    } else if (calculation.includes("*")) {
+        op = "*"
+        numArr = calculation.split("*")
+        result = calculator(numArr, op)
+    } else if (calculation.includes("/")) {
+        op = "/"
+        numArr = calculation.split("/")
+        result = calculator(numArr, op)
+    }
+    console.log(result)
+    resultHtml.textContent = result
+
 }
 
 const button = document.querySelector('#start');
