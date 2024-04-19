@@ -5,7 +5,7 @@ const p = document.querySelector('#house');
 
 switch (randNum){
   case 1:
-    p.innerHTML = name + ' you are Gryffindor';
+    p.innerHTML = name + ' you are  Gryffindor';
     break;
 
   case 2:

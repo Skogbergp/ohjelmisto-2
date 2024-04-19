@@ -10,9 +10,3 @@ trigger.addEventListener("mouseenter",function(){
 trigger.addEventListener("mouseout",function(){
   target.src = "img/picA.jpg";
 })
-
-
-function a (evt){
-
-
-}
