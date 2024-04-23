@@ -30,7 +30,7 @@ async function showresult() {
 
 
         const img = document.createElement("img")
-        img.src = data[i].show.image?.medium
+        img.src =  data[i].show.image !== null ? data[i].show.image.medium : "https://via.placeholder.com/210x295?text=Not%20Found";
         img.alt = data[i].show.name;
 
         const summaryElement = document.createElement("div");
